@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+<div class="hero">
+    <h1 class="title center">JOJO's Bizare Expense Reimbursements!</h1>
+</div>
+
+<div class=" center"><h2 class="subtitle">Login Here!</h2></div>
+
+<div class="container mt-5">
+    <form action="/login" method="POST"> <!-- This action is what connected to the button and calls the POST method (I think!) -->
+        <div class="form-group"> <!-- make the login form -->
+            <label for="email">Email</label><br> <!-- The <label> tag defines a label for many form elements. -->
+            <input type="text"  name="email" placeholder="JOJO@BIZARE.COM"/> <!-- text: Displays a single-line text input field placeholder: text inside the box -->
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label><br>
+            <input type="password"  name="password" placeholder="🌟🌟🌟🌟🌟"/> <!-- password: hides the password when you type it! -->
+        </div>
+        <button type="submit" id="submit" class="btn btn-success">Login</button><!-- button to log in-->
+        <br>
+        <br>
+        <a href="/signup" class="btn btn-success">Register</a>
+    </form>
+</div>
+<!-- <div class=" center">
+    <img class="money" src="./images/money.png" alt="whole lot of cash">
+</div> -->
+</body>
+</html>

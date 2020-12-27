@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--        configure the datasource-->
+        <!--        Note: this is not ok, hide your connection info using interpolation-->
+        <property name="hibernate.connection.url">jdbc:postgresql://java-1120-genaro.cma1uubn6u6e.us-east-2.rds.amazonaws.com:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Vinesauce147852</property>
+
+        <!--        driver spec (make sure you change the driver to a postgresql)-->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+
+        <!--        make things nice-->
+        <property name="show_sql">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- use hibernate to create our schema -->
+        <!-- Four values for hbm2ddl.auto
+          - create - drop then create at startup
+          - create-drop - create at startup and drop at shutdown
+          - update - only update schema diffs
+          - none - default, don't do it
+         -->
+
+        <!--        (Note: omit for Project_1 (don't let hibernate create the tables for us))-->
+        <!-- <property name="hibernate.hbm2ddl.auto">create</property>-->
+
+        <!--        mappings-->
+        <mapping class="com.revature.user.User"/>
+        <mapping class="com.revature.reimbursement.Reimbursement"/>
+    </session-factory>
+</hibernate-configuration>

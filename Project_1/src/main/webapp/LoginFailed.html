@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Failed</title>
+    <style>
+        body {
+            background-image: url("images/background.jpg");
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 id="fail">Invalid Credentials. Please try again. </h1>
+    <form action="/login" method="POST"> <!-- This action is what connected to the button and calls the POST method (I think!) -->
+        <div class="form-group"> <!-- make the login form -->
+            <label for="email">Email</label><br> <!-- The <label> tag defines a label for many form elements. -->
+                <input type="text"  name="email" placeholder="JOJO@BIZARE.COM"/> <!-- text: Displays a single-line text input field placeholder: text inside the box -->
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label><br>
+            <input type="password"  name="password" placeholder="🌟🌟🌟🌟🌟"/> <!-- password: hides the password when you type it! -->
+        </div>
+
+        <button type="submit" id="submit" class="btn btn-success">Login</button><!-- button to log in-->
+        <br>
+        <br>
+<!--        <a href="/register" class="btn btn-success">Register</a>-->
+    </form>
+</div>
+
+</body>
+</html>
